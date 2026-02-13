@@ -40,26 +40,6 @@ const projectsDatabase: { [key: number]: ProjectDetail } = {
     ],
     videos: [],
   },
-  2: {
-    id: 2,
-    title: "Brand Identity System",
-    brand: "Brand - Tech Startup",
-    category: "Brand Identity Design",
-    color: "bg-yellow-400",
-    description: [
-      "A comprehensive brand identity system designed for a forward-thinking tech company. The system includes logo design, color palette, typography guidelines, and brand applications.",
-      "The design emphasizes modern aesthetics with clean lines and contemporary elements. Every component has been carefully crafted to ensure consistency across all touchpoints.",
-      "The brand identity reflects the company's commitment to innovation and excellence in the technology sector.",
-    ],
-    fullDescription:
-      "This project showcases a complete brand identity system with all necessary guidelines and applications.",
-    images: [
-      "/placeholder.jpg",
-      "/placeholder.jpg",
-      "/placeholder.jpg",
-    ],
-    videos: [],
-  },
 };
 
 export default async function ProjectDetailPage({

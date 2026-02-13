@@ -5,14 +5,7 @@ import Projects from './components/Projects';
 
 export default function Home() {
   const projectsData = [
-    { id: 1, title: "Video Project", type: "video" as const, src: "", color: "bg-teal-200", category: "Motion Design" },
-    { id: 2, title: "GIF Animation", type: "image" as const, src: "/placeholder.gif", color: "bg-yellow-500", category: "Animation" },
-    { id: 3, title: "UI Design", type: "image" as const, src: "/placeholder.jpg", color: "bg-gray-400", category: "UI/UX" },
-    { id: 4, title: "Brand Design", type: "image" as const, src: "/placeholder.jpg", color: "bg-rose-300", category: "Branding" },
-    { id: 5, title: "Web Design", type: "image" as const, src: "/placeholder.jpg", color: "bg-blue-900", category: "Web" },
-    { id: 6, title: "Mobile App", type: "image" as const, src: "/placeholder.jpg", color: "bg-yellow-500", category: "Mobile" },
-    { id: 7, title: "Illustration", type: "image" as const, src: "/placeholder.jpg", color: "bg-gray-600", category: "Art" },
-    { id: 8, title: "Photography", type: "image" as const, src: "/placeholder.jpg", color: "bg-teal-100", category: "Photo" },
+    { id: 1, title: "Campaign Design", type: "image" as const, src: "/placeholder.jpg", color: "bg-teal-300", category: "Campaign Design" },
   ];
 
   const brands = [
@@ -81,17 +74,7 @@ export default function Home() {
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       />
 
-      {/* View All Projects Link */}
-      <section className="bg-gray-50 text-center pb-12">
-        <div className="max-w-7xl mx-auto px-4">
-          <a 
-            href="/projects" 
-            className="inline-block text-blue-900 font-bold text-lg hover:text-blue-700 transition"
-          >
-            View All Projects →
-          </a>
-        </div>
-      </section>
+ 
 
       {/* Brands Section */}
       <section className="py-20 bg-white">
