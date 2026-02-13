@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import ProjectGallery from "@/app/components/ProjectGallery";
