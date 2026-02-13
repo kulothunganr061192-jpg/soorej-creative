@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 interface Project {
   id: number;
@@ -18,13 +19,16 @@ interface ProjectsProps {
   projects: Project[];
   title?: string;
   description?: string;
+  limit?: number;
 }
 
 export default function Projects({
   projects,
   title = "Projects",
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  limit = 7,
 }: ProjectsProps) {
+  const displayedProjects = projects.slice(0, limit);
   return (
     <section className="bg-gray-50 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,15 +36,16 @@ export default function Projects({
         <p className="text-gray-600 mb-12">{description}</p>
 
           <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-            {projects.map((project, index) => {
+            {displayedProjects.map((project, index) => {
               const heights = [250, 300, 350, 400];
               const randomHeight = heights[index % heights.length];
               return (
-                <div
+                <Link
+                  href={`/projects/${project.id}`}
                   key={project.id}
                   className={`${
                     project.color || "bg-gray-300"
-                  } rounded-lg overflow-hidden cursor-default group relative shadow-lg hover:shadow-2xl transition-all duration-300 break-inside-avoid`}
+                  } rounded-lg overflow-hidden cursor-pointer group relative shadow-lg hover:shadow-2xl transition-all duration-300 break-inside-avoid block`}
                   style={{ height: `${randomHeight}px` }}
                 >
                 {project.type === "image" ? (
@@ -79,7 +84,7 @@ export default function Projects({
                     {project.title}
                   </div>
                 )}
-              </div>
+              </Link>
             );
           })}
         </div>

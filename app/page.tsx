@@ -28,7 +28,7 @@ export default function Home() {
               <div className="w-96 h-96 bg-gradient-to-b from-gray-700 to-gray-900 rounded-lg flex items-end justify-center relative">
                 <div className="text-center pb-12">
                   <p className="text-gray-400 text-sm mb-4">
-                    • by <span className="text-teal-400">Leía Cornish</span> |<span className="text-teal-400"> I am Expulzih</span>.
+                    <span className="text-teal-400" style={{ color: '#a47764' }}>Leía Cornish</span>|<span className="text-teal-400"> I am Expulzih</span>.
                   </p>
                 </div>
               </div>
@@ -36,14 +36,12 @@ export default function Home() {
             
             {/* Right side with text */}
             <div className="space-y-6">
-              <p className="text-teal-400 text-sm font-semibold">YOU NEED A CREATIVE HUMAN WHO BELIEVES IN</p>
+              <p className="text-sm font-semibold" style={{color: '#a47764'}}>YOU NEED A CREATIVE HUMAN WHO BELIEVES IN</p>
                 <h1 className="text-9xl font-bold leading-tight">ABCDE</h1>
-              <p className="text-gray-300 text-lg mt-4">
-                Creative Director & Designer crafting beautiful digital experiences
+                <p className="text-gray-300 text-lg mt-4" style={{color: '#744444'}}>
+                Curious?  <span className='' style={{ color: '#a47764' }}>Leila Consult</span>. I can Explain.
               </p>
-              <p className="text-gray-300 text-lg">
-                Sorry, I&apos;m not afraid of Artificial Intelligence (AI). I believe strongly that humans aren&apos;t replaceable by Al not because I didn&apos;t founded Human intelligence (HI) about it.
-              </p>
+             
             </div>
           </div>
         </div>
