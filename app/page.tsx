@@ -1,17 +1,18 @@
 import Image from 'next/image';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Projects from './components/Projects';
 
 export default function Home() {
-  const projects = [
-    { id: 1, title: "Project 1", color: "bg-teal-200" },
-    { id: 2, title: "Project 2", color: "bg-yellow-500" },
-    { id: 3, title: "Project 3", color: "bg-gray-400" },
-    { id: 4, title: "Project 4", color: "bg-rose-300" },
-    { id: 5, title: "Project 5", color: "bg-blue-900" },
-    { id: 6, title: "Project 6", color: "bg-yellow-500" },
-    { id: 7, title: "Project 7", color: "bg-gray-600" },
-    { id: 8, title: "Project 8", color: "bg-teal-100" },
+  const projectsData = [
+    { id: 1, title: "Video Project", type: "video" as const, src: "", color: "bg-teal-200", category: "Motion Design" },
+    { id: 2, title: "GIF Animation", type: "image" as const, src: "/placeholder.gif", color: "bg-yellow-500", category: "Animation" },
+    { id: 3, title: "UI Design", type: "image" as const, src: "/placeholder.jpg", color: "bg-gray-400", category: "UI/UX" },
+    { id: 4, title: "Brand Design", type: "image" as const, src: "/placeholder.jpg", color: "bg-rose-300", category: "Branding" },
+    { id: 5, title: "Web Design", type: "image" as const, src: "/placeholder.jpg", color: "bg-blue-900", category: "Web" },
+    { id: 6, title: "Mobile App", type: "image" as const, src: "/placeholder.jpg", color: "bg-yellow-500", category: "Mobile" },
+    { id: 7, title: "Illustration", type: "image" as const, src: "/placeholder.jpg", color: "bg-gray-600", category: "Art" },
+    { id: 8, title: "Photography", type: "image" as const, src: "/placeholder.jpg", color: "bg-teal-100", category: "Photo" },
   ];
 
   const brands = [
@@ -44,7 +45,10 @@ export default function Home() {
             {/* Right side with text */}
             <div className="space-y-6">
               <p className="text-teal-400 text-sm font-semibold">YOU NEED A CREATIVE HUMAN WHO BELIEVES IN</p>
-              <h1 className="text-7xl font-black leading-tight font-[--font-montserrat]">ABCDE</h1>
+                <h1 className="text-9xl font-bold leading-tight">ABCDE</h1>
+              <p className="text-gray-300 text-lg mt-4">
+                Creative Director & Designer crafting beautiful digital experiences
+              </p>
               <p className="text-gray-300 text-lg">
                 Sorry, I'm not afraid of Artificial Intelligence (AI). I believe strongly that humans aren't replaceable by Al not because I didn't founded Human intelligence (HI) about it.
               </p>
@@ -54,10 +58,10 @@ export default function Home() {
       </section>
 
       {/* Hi Section */}
-      <section className="bg-amber-50 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-slate-900 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-amber-50 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="text-7xl font-black text-gray-400 text-center md:text-left font-[--font-montserrat]">Hi</div>
+            <div className="text-7xl font-black text-gray-400 text-center">Hi</div>
             <div className="space-y-4 text-gray-700">
               <p className="text-sm leading-relaxed">
                 Sorry, I'm afraid of Artificial Intelligence (AI). I believe strongly that humans aren't replaceable by AI not because I didn't founded Human Intelligence (HI) about it. Because I create for people, not for machines or code foundation.
@@ -71,42 +75,21 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section className="bg-gray-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 font-[--font-montserrat]">Projects</h2>
-          <p className="text-gray-600 mb-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          
-          <div className="grid grid-cols-4 gap-4 mb-8">
-            {/* Large project */}
-            <div className="col-span-2 row-span-2 bg-teal-200 rounded-lg h-80 flex items-center justify-center relative overflow-hidden group cursor-pointer">
-              <div className="text-6xl text-teal-300/30 group-hover:scale-110 transition-transform">▶</div>
-            </div>
-            
-            {/* Right column projects */}
-            <div className="col-span-2 bg-yellow-500 rounded-lg h-40 flex items-center justify-center text-white font-bold text-2xl">GIF</div>
-            
-            {/* Bottom row */}
-            <div className="bg-gray-500 rounded-lg h-32 flex items-center justify-center">
-              <div className="text-4xl text-gray-400/30">▲</div>
-            </div>
-            <div className="bg-rose-400 rounded-lg h-32 flex items-center justify-center text-white font-bold">UX</div>
-            <div className="bg-blue-900 rounded-lg h-32 flex items-center justify-center">
-              <div className="text-4xl text-blue-800/30">◆</div>
-            </div>
-            
-            {/* Last row */}
-            <div className="bg-yellow-500 rounded-lg h-32 flex items-center justify-center text-white font-bold">UIT</div>
-            <div className="bg-gray-700 rounded-lg h-32 flex items-center justify-center">
-              <div className="text-4xl text-gray-600/30">◉</div>
-            </div>
-            <div className="bg-teal-100 rounded-lg h-32 flex items-center justify-center">
-              <div className="text-4xl text-teal-200/30">◆</div>
-            </div>
-          </div>
+      <Projects 
+        projects={projectsData}
+        title="Projects"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      />
 
-          <div className="text-center">
-            <button className="text-blue-900 font-bold hover:text-blue-700 transition">View Full Portfolio →</button>
-          </div>
+      {/* View All Projects Link */}
+      <section className="bg-gray-50 text-center pb-12">
+        <div className="max-w-7xl mx-auto px-4">
+          <a 
+            href="/projects" 
+            className="inline-block text-blue-900 font-bold text-lg hover:text-blue-700 transition"
+          >
+            View All Projects →
+          </a>
         </div>
       </section>
 
