@@ -204,13 +204,13 @@ export default function ProjectsPage() {
                 randomHeights[Math.floor(Math.random() * randomHeights.length)];
 
               return (
-                <div
+                <a
                   key={project.id}
+                  href={`/projects/${project.id}`}
                   className={`${
                     project.color || "bg-gray-300"
-                  } rounded-lg overflow-hidden cursor-pointer group relative shadow-lg hover:shadow-2xl transition-all duration-300 break-inside-avoid`}
+                  } rounded-lg overflow-hidden cursor-pointer group relative shadow-lg hover:shadow-2xl transition-all duration-300 break-inside-avoid block`}
                   style={{ height: `${randomHeight}px` }}
-                  onClick={() => setSelectedProject(project)}
                 >
                   {project.type === "image" ? (
                     <Image
@@ -240,7 +240,7 @@ export default function ProjectsPage() {
                       <p className="text-gray-300 text-sm">{project.category}</p>
                     </div>
                   </div>
-                </div>
+              </a>
               );
             })}
           </div>
