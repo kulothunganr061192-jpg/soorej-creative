@@ -99,10 +99,9 @@ export default function ProjectsPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-            {filteredProjects.map((project) => {
+            {filteredProjects.map((project, index) => {
               const randomHeights = [250, 300, 320, 350, 380, 400];
-              const randomHeight =
-                randomHeights[Math.floor(Math.random() * randomHeights.length)];
+              const randomHeight = randomHeights[index % randomHeights.length];
 
               return (
                 <a
@@ -155,10 +154,10 @@ export default function ProjectsPage() {
             Interested in a project?
           </h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Let's collaborate and bring your creative vision to life
+            Let&apos;s collaborate and bring your creative vision to life
           </p>
           <a
-            href="/#contact"
+            href="#contact"
             className="inline-block px-8 py-4 bg-blue-900 text-white font-semibold rounded-full hover:bg-blue-800 transition"
           >
             Get in Touch

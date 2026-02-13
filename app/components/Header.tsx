@@ -36,8 +36,8 @@ export default function Header() {
 
         {/* Desktop Menu */}
         <div className="hidden gap-8">
-          <a href="/" className="text-gray-300 hover:text-blue-400 transition font-semibold">Home</a>
-          <a href="/projects" className="text-gray-300 hover:text-blue-400 transition font-semibold">Portfolio</a>
+          <Link href="/" className="text-gray-300 hover:text-blue-400 transition font-semibold">Home</Link>
+          <Link href="/projects" className="text-gray-300 hover:text-blue-400 transition font-semibold">Portfolio</Link>
           <a href="#about" className="text-gray-300 hover:text-blue-400 transition font-semibold">About</a>
           <a href="#contact" className="text-gray-300 hover:text-blue-400 transition font-semibold">Contact</a>
         </div>
@@ -58,8 +58,8 @@ export default function Header() {
           </button>
 
           <div className="flex flex-col gap-12 text-center">
-            <a href="/" onClick={closeMenu} className="text-4xl text-gray-300 hover:text-blue-400 transition font-bold">Home</a>
-            <a href="/projects" onClick={closeMenu} className="text-4xl text-gray-300 hover:text-blue-400 transition font-bold">Portfolio</a>
+            <Link href="/" onClick={closeMenu} className="text-4xl text-gray-300 hover:text-blue-400 transition font-bold">Home</Link>
+            <Link href="/projects" onClick={closeMenu} className="text-4xl text-gray-300 hover:text-blue-400 transition font-bold">Portfolio</Link>
             <a href="#about" onClick={closeMenu} className="text-4xl text-gray-300 hover:text-blue-400 transition font-bold">About</a>
             <a href="#contact" onClick={closeMenu} className="text-4xl text-gray-300 hover:text-blue-400 transition font-bold">Contact</a>
           </div>

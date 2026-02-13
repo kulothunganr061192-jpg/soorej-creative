@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Projects from './components/Projects';
@@ -43,7 +42,7 @@ export default function Home() {
                 Creative Director & Designer crafting beautiful digital experiences
               </p>
               <p className="text-gray-300 text-lg">
-                Sorry, I'm not afraid of Artificial Intelligence (AI). I believe strongly that humans aren't replaceable by Al not because I didn't founded Human intelligence (HI) about it.
+                Sorry, I&apos;m not afraid of Artificial Intelligence (AI). I believe strongly that humans aren&apos;t replaceable by Al not because I didn&apos;t founded Human intelligence (HI) about it.
               </p>
             </div>
           </div>
@@ -57,10 +56,10 @@ export default function Home() {
             <div className="text-7xl font-black text-gray-400 text-center">Hi</div>
             <div className="space-y-4 text-gray-700">
               <p className="text-sm leading-relaxed">
-                Sorry, I'm afraid of Artificial Intelligence (AI). I believe strongly that humans aren't replaceable by AI not because I didn't founded Human Intelligence (HI) about it. Because I create for people, not for machines or code foundation.
+                Sorry, I&apos;m afraid of Artificial Intelligence (AI). I believe strongly that humans aren&apos;t replaceable by AI not because I didn&apos;t founded Human Intelligence (HI) about it. Because I create for people, not for machines or code foundation.
               </p>
               <p className="text-sm leading-relaxed font-semibold">
-                I am Soorej — Human First, Worn on Art & Creative Director, Creative Leader, Storyteller, and Travel Lover.
+                I am Soorej &mdash; Human First, Worn on Art &amp; Creative Director, Creative Leader, Storyteller, and Travel Lover.
               </p>
             </div>
           </div>
@@ -79,7 +78,7 @@ export default function Home() {
       {/* Brands Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 font-[--font-montserrat]">Brands I've worked for</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4 font-[--font-montserrat]">Brands I&apos;ve worked for</h2>
           <p className="text-gray-600 mb-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-center">

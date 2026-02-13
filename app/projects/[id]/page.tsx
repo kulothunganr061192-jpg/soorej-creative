@@ -58,7 +58,7 @@ export default async function ProjectDetailPage({
         <div className="max-w-7xl mx-auto px-4 py-20 text-center">
           <h1 className="text-4xl font-bold text-gray-900">Project Not Found</h1>
           <p className="text-gray-600 mt-4">
-            The project you're looking for doesn't exist.
+            The project you&apos;re looking for doesn&apos;t exist.
           </p>
           <a
             href="/projects"
@@ -172,10 +172,10 @@ export default async function ProjectDetailPage({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-4">Interested in working together?</h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let's create something amazing for your brand
+            Let&apos;s create something amazing for your brand
           </p>
           <a
-            href="/#contact"
+            href="#contact"
             className="inline-block px-8 py-4 bg-white text-blue-900 font-semibold rounded-full hover:bg-gray-100 transition"
           >
             Get in Touch

@@ -26,7 +26,6 @@ export default function Projects({
   title = "Projects",
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 }: ProjectsProps) {
-  const [hoveredId, setHoveredId] = useState<number | null>(null);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
@@ -36,8 +35,9 @@ export default function Projects({
         <p className="text-gray-600 mb-12">{description}</p>
 
           <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-            {projects.map((project) => {
-              const randomHeight = [250, 300, 350, 400][Math.floor(Math.random() * 4)];
+            {projects.map((project, index) => {
+              const heights = [250, 300, 350, 400];
+              const randomHeight = heights[index % heights.length];
               return (
                 <div
                   key={project.id}
@@ -45,8 +45,6 @@ export default function Projects({
                     project.color || "bg-gray-300"
                   } rounded-lg overflow-hidden cursor-pointer group relative shadow-lg hover:shadow-2xl transition-all duration-300 break-inside-avoid`}
                   style={{ height: `${randomHeight}px` }}
-                onMouseEnter={() => setHoveredId(project.id)}
-                onMouseLeave={() => setHoveredId(null)}
                 onClick={() => setSelectedProject(project)}
               >
                 {project.type === "image" ? (
