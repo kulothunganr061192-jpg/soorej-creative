@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-700 pt-8 text-center text-gray-400 text-sm">
-          <p>&copy; 2026 Soorej Creative. Built with Next.js, Tailwind CSS, and Vercel.</p>
+          <p>&copy; 2026 Soorej Creative.</p>
         </div>
       </div>
     </footer>

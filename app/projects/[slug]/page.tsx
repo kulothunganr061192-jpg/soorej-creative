@@ -83,8 +83,8 @@ export default async function ProjectDetailPage({
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-linear-to-b from-gray-50 to-white py-5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-10 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-10">
           <Link
             href="/projects"
             className="text-blue-900 font-semibold hover:text-blue-700 transition inline-block"
@@ -92,10 +92,9 @@ export default async function ProjectDetailPage({
             ← Back to Projects
           </Link>
         </div>
-      </section>
-
+      
       {/* Project Details */}
-      <section className="py-20 bg-white">
+      
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Left Column - Content */}

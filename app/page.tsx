@@ -50,7 +50,7 @@ export default function Home() {
       {/* Hi Section */}
       <section className="bg-slate-900 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white rounded-lg shadow-lg p-8" style={{backgroundColor: '#ffdebb'}}>
+            <div className="bg-white rounded-lg shadow-lg p-8 py-15" style={{backgroundColor: '#ffdebb'}}>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
         <div className="md:col-span-2 text-7xl font-black text-gray-900 text-center">Hi</div>
         <div className="md:col-span-3 space-y-4 text-gray-900 px-8">
