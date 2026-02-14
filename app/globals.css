@@ -3,11 +3,6 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-montserrat: var(--font-montserrat);
@@ -24,10 +19,16 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-roboto);
+  font-size: 1rem;
 }
 
-/* Roboto font for headings */
+/* Montserrat font for headings */
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-montserrat);
+}
+
+/* Roboto font for text elements */
+link, p, div {
   font-family: var(--font-roboto);
 }

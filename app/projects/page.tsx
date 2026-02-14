@@ -41,7 +41,7 @@ export default function ProjectsPage() {
       slug: "campaign-design",
       title: "Campaign Design",
       type: "image",
-      src: "/placeholder.jpg",
+      src: "/images/placeholder.jpg",
       color: "bg-teal-300",
       category: "Campaign Design",
       description: "Brand - Amazon Campaign Design project with complete visual branding and marketing strategy.",
@@ -137,7 +137,7 @@ export default function ProjectsPage() {
                     ) : null}
 
                     {/* Text Overlay */}
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 translate-y-full group-hover:translate-y-0 transition-transform">
+                    <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 to-transparent p-4 translate-y-full group-hover:translate-y-0 transition-transform">
                       <h3 className="text-white font-bold">{project.title}</h3>
                       <p className="text-gray-300 text-sm">{project.category}</p>
                     </div>

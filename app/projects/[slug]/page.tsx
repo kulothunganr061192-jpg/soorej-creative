@@ -33,12 +33,12 @@ const projectsDatabase: { [key: number]: ProjectDetail } = {
     fullDescription:
       "This work was produced in collaboration with an agency. All imagery, brand assets, and final outputs are the property of their respective owners and are displayed solely for portfolio representation.",
     images: [
-      "/placeholder.jpg",
-      "/placeholder.jpg",
-      "/placeholder.jpg",
-      "/placeholder.jpg",
-      "/placeholder.jpg",
-      "/placeholder.jpg",
+      "/images/placeholder.jpg",
+      "/images/placeholder.jpg",
+      "/images/placeholder.jpg",
+      "/images/placeholder.jpg",
+      "/images/placeholder.jpg",
+      "/images/placeholder.jpg",
     ],
     videos: [],
   },
@@ -61,7 +61,7 @@ export default async function ProjectDetailPage({
     return (
       <div className="min-h-screen bg-white">
         <Header />
-        <div className="max-w-7xl mx-auto px-4 py-20 text-center">
+        <div className="max-w-7xl mx-auto px-4 py-5 text-center">
           <h1 className="text-4xl font-bold text-gray-900">Project Not Found</h1>
           <p className="text-gray-600 mt-4">
             The project you&apos;re looking for doesn&apos;t exist.
@@ -83,11 +83,11 @@ export default async function ProjectDetailPage({
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-gray-50 to-white py-20">
+      <section className="bg-linear-to-b from-gray-50 to-white py-5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/projects"
-            className="text-blue-900 font-semibold hover:text-blue-700 transition mb-8 inline-block"
+            className="text-blue-900 font-semibold hover:text-blue-700 transition inline-block"
           >
             ← Back to Projects
           </Link>
@@ -124,15 +124,7 @@ export default async function ProjectDetailPage({
                 <p className="text-sm text-gray-600">{project.fullDescription}</p>
               </div>
 
-              {/* Project Details */}
-              <div className="space-y-4">
-                <div>
-                  <p className="text-sm font-semibold text-gray-900 mb-2">
-                    Category
-                  </p>
-                  <p className="text-gray-600">{project.category}</p>
-                </div>
-              </div>
+              
             </div>
 
             {/* Right Column - Gallery */}

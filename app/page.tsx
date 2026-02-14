@@ -4,7 +4,7 @@ import Projects from './components/Projects';
 
 export default function Home() {
   const projectsData = [
-    { id: 1, slug: "campaign-design", title: "Campaign Design", type: "image" as const, src: "/placeholder.jpg", color: "bg-teal-300", category: "Campaign Design" },
+    { id: 1, slug: "campaign-design", title: "Campaign Design", type: "image" as const, src: "/images/placeholder.jpg", color: "bg-teal-300", category: "Campaign Design" },
   ];
 
   const brands = [
@@ -21,11 +21,11 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="bg-slate-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
             {/* Left side with image placeholder */}
             <div className="flex items-center justify-center">
-              <div className="w-96 h-96 bg-gradient-to-b from-gray-700 to-gray-900 rounded-lg flex items-end justify-center relative">
+              <div className="w-96 h-96 bg-linear-to-b from-gray-700 to-gray-900 rounded-lg flex items-end justify-center relative">
                 <div className="text-center pb-12">
                   <p className="text-gray-400 text-sm mb-4">
                     <span className="text-teal-400" style={{ color: '#a47764' }}>Leía Cornish</span>|<span className="text-teal-400"> I am Expulzih</span>.
@@ -36,9 +36,9 @@ export default function Home() {
             
             {/* Right side with text */}
             <div className="space-y-6">
-              <p className="text-sm font-semibold" style={{color: '#a47764'}}>YOU NEED A CREATIVE HUMAN WHO BELIEVES IN</p>
-                <h1 className="text-9xl font-bold leading-tight">ABCDE</h1>
-                <p className="text-gray-300 text-lg mt-4" style={{color: '#744444'}}>
+                <p className="text-xl font-medium tracking-wider" style={{color: '#a47764'}}>YOU NEED A CREATIVE HUMAN WHO BELIEVES IN</p>
+                <h1 className="text-[9rem] font-bold leading-tight">ABCDE</h1>
+                <p className="text-xl font-medium mt-4" style={{color: '#744444'}}>
                 Curious?  <span className='' style={{ color: '#a47764' }}>Leila Consult</span>. I can Explain.
               </p>
              
@@ -49,17 +49,19 @@ export default function Home() {
 
       {/* Hi Section */}
       <section className="bg-slate-900 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-amber-50 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="text-7xl font-black text-gray-400 text-center">Hi</div>
-            <div className="space-y-4 text-gray-700">
-              <p className="text-sm leading-relaxed">
-                Sorry, I&apos;m afraid of Artificial Intelligence (AI). I believe strongly that humans aren&apos;t replaceable by AI not because I didn&apos;t founded Human Intelligence (HI) about it. Because I create for people, not for machines or code foundation.
-              </p>
-              <p className="text-sm leading-relaxed font-semibold">
-                I am Soorej &mdash; Human First, Worn on Art &amp; Creative Director, Creative Leader, Storyteller, and Travel Lover.
-              </p>
-            </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-white rounded-lg shadow-lg p-8" style={{backgroundColor: '#ffdebb'}}>
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
+        <div className="md:col-span-2 text-7xl font-black text-gray-900 text-center">Hi</div>
+        <div className="md:col-span-3 space-y-4 text-gray-900 px-8">
+          <p className="text-xl leading-relaxed">
+            Sorry, I&apos;m not afraid of Artificial Intelligence (AI). I don&apos;t think it&apos;s the end of humanity. I think it&apos;s the beginning, because I stand for people, not for machines or heartless design.
+          </p>
+          <p className="text-xl leading-relaxed font-semibold">
+            &apos;I am Soorej&apos; — Human First, artist on Art & Creative Director, Creative Leader, Storyteller, and Travel Lover.
+          </p>
+        </div>
+          </div>
           </div>
         </div>
       </section>
