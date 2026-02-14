@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import ProjectGallery from "@/app/components/ProjectGallery";
@@ -5,6 +6,7 @@ import ProjectGallery from "@/app/components/ProjectGallery";
 interface ProjectDetail {
   id: number;
   title: string;
+  slug: string;
   brand: string;
   category: string;
   description: string[];
@@ -19,6 +21,7 @@ const projectsDatabase: { [key: number]: ProjectDetail } = {
   1: {
     id: 1,
     title: "Campaign Design",
+    slug: "campaign-design",
     brand: "Brand - Amazon",
     category: "Campaign Design",
     color: "bg-teal-300",
@@ -41,14 +44,18 @@ const projectsDatabase: { [key: number]: ProjectDetail } = {
   },
 };
 
+// Helper function to find project by slug
+function getProjectBySlug(slug: string): ProjectDetail | undefined {
+  return Object.values(projectsDatabase).find(project => project.slug === slug);
+}
+
 export default async function ProjectDetailPage({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ slug: string }>;
 }) {
   const resolvedParams = await params;
-  const projectId = parseInt(resolvedParams.id);
-  const project = projectsDatabase[projectId];
+  const project = getProjectBySlug(resolvedParams.slug);
 
   if (!project) {
     return (
@@ -59,12 +66,12 @@ export default async function ProjectDetailPage({
           <p className="text-gray-600 mt-4">
             The project you&apos;re looking for doesn&apos;t exist.
           </p>
-          <a
+          <Link
             href="/projects"
             className="inline-block mt-8 px-6 py-3 bg-blue-900 text-white font-semibold rounded-lg hover:bg-blue-800 transition"
           >
             Back to Projects
-          </a>
+          </Link>
         </div>
         <Footer />
       </div>
@@ -78,12 +85,12 @@ export default async function ProjectDetailPage({
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-gray-50 to-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <a
+          <Link
             href="/projects"
             className="text-blue-900 font-semibold hover:text-blue-700 transition mb-8 inline-block"
           >
             ← Back to Projects
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -141,14 +148,13 @@ export default async function ProjectDetailPage({
             More Projects
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((id) => {
-              const relatedProject = projectsDatabase[id as keyof typeof projectsDatabase];
-              if (!relatedProject || relatedProject.id === projectId)
+            {Object.values(projectsDatabase).map((relatedProject) => {
+              if (relatedProject.id === project.id)
                 return null;
               return (
                 <a
-                  key={id}
-                  href={`/projects/${id}`}
+                  key={relatedProject.id}
+                  href={`/projects/${relatedProject.slug}`}
                   className={`${relatedProject.color} rounded-lg overflow-hidden aspect-square cursor-pointer group relative shadow-lg hover:shadow-2xl transition-all`}
                 >
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-end justify-start p-6">

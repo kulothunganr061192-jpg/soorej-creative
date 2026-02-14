@@ -4,7 +4,7 @@ import Projects from './components/Projects';
 
 export default function Home() {
   const projectsData = [
-    { id: 1, title: "Campaign Design", type: "image" as const, src: "/placeholder.jpg", color: "bg-teal-300", category: "Campaign Design" },
+    { id: 1, slug: "campaign-design", title: "Campaign Design", type: "image" as const, src: "/placeholder.jpg", color: "bg-teal-300", category: "Campaign Design" },
   ];
 
   const brands = [

@@ -5,6 +5,7 @@ import Link from "next/link";
 
 interface Project {
   id: number;
+  slug: string;
   title: string;
   type: "image" | "video";
   src: string;
@@ -41,7 +42,7 @@ export default function Projects({
               const randomHeight = heights[index % heights.length];
               return (
                 <Link
-                  href={`/projects/${project.id}`}
+                  href={`/projects/${project.slug}`}
                   key={project.id}
                   className={`${
                     project.color || "bg-gray-300"

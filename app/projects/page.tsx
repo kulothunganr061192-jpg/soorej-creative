@@ -7,6 +7,7 @@ import { useState } from "react";
 
 interface Project {
   id: number;
+  slug: string;
   title: string;
   type: "image" | "video";
   src: string;
@@ -37,6 +38,7 @@ export default function ProjectsPage() {
   const projectsData: Project[] = [
     {
       id: 1,
+      slug: "campaign-design",
       title: "Campaign Design",
       type: "image",
       src: "/placeholder.jpg",
@@ -106,7 +108,7 @@ export default function ProjectsPage() {
               return (
                 <a
                   key={project.id}
-                  href={`/projects/${project.id}`}
+                  href={`/projects/${project.slug}`}
                   className={`${
                     project.color || "bg-gray-300"
                   } rounded-lg overflow-hidden cursor-pointer group relative shadow-lg hover:shadow-2xl transition-all duration-300 break-inside-avoid block`}
